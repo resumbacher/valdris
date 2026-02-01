@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valdris | Welt im Umbruch</title>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --silver: #a8a8a8;
+            --bg-dark: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0d9c5;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-color);
+            font-family: 'Segoe UI', 'Georgia', serif;
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('frau_bruecke.png');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 4px solid var(--gold);
+        }
+
+        header h1 {
+            font-size: clamp(3rem, 10vw, 6rem);
+            color: var(--gold);
+            margin: 0;
+            letter-spacing: 12px;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+        }
+
+        nav {
+            background: #000;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #333;
+        }
+
+        nav a {
+            color: var(--gold);
+            text-decoration: none;
+            margin: 0 15px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .intro {
+            max-width: 850px;
+            margin: -60px auto 40px;
+            background: var(--card-bg);
+            padding: 40px;
+            border: 1px solid var(--gold);
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Regions-Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 40px 0;
+        }
+
+        .region-card {
+            background: var(--card-bg);
+            border: 1px solid #333;
+            border-top: 4px solid var(--gold);
+            transition: 0.3s;
+        }
+
+        .region-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+        }
+
+        .region-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .region-text {
+            padding: 25px;
+        }
+
+        .region-text h2 {
+            color: var(--gold);
+            margin-top: 0;
+        }
+
+        .tag {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            background: #333;
+            padding: 4px 10px;
+            color: var(--gold);
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* Bibliothek & Download */
+        .library-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .book-card {
+            background: #151515;
+            border: 1px solid #333;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--gold);
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 15px;
+        }
+
+        .download-box {
+            background: #1a1a1a;
+            border: 2px dashed var(--gold);
+            padding: 40px;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>VALDRIS</h1>
+</header>
+
+<nav>
+    <a href="#welt">Die Welt</a>
+    <a href="#bibliothek">Bibliothek</a>
+    <a href="#downloads">Downloads</a>
+    <a href="#karte">Karte</a>
+</nav>
+
+<div class="container">
+    
+    <div class="intro">
+        <p><strong>Valdris ist eine Welt im Umbruch</strong>, wo alte Mächte mit neuen Ideen ringen und Abenteurer an jeder Ecke Ruhm oder Verderben finden können.</p>
+    </div>
+
+    <section id="welt">
+        <h2 style="text-align: center; color: var(--gold); font-size: 2.5rem;">Die Regionen von Valdris</h2>
+        <div class="content-grid">
+            
+            <div class="region-card">
+                <img src="bild1.png" alt="Aurelion" class="region-image">
+                <div class="region-text">
+                    <span class="tag">Machtzentrum</span>
+                    <h2>Aurelion</h2>
+                    <p>Im Herzen von Valdris erstreckt sich Aurelion, das mächtigste Reich des Kontinents. Goldene Kuppeln erheben sich über Marmorpaläste. Doch hinter der prächtigen Fassade tobt ein gnadenloser Machtkampf zwischen Adelshäusern, Magiergilde und der Kaiserin selbst.</p>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <div class="region-text">
+                    <span class="tag">Tradition</span>
+                    <h2>Hügellande von Caeldorn</h2>
+                    <p>Nördlich liegen die nebelverhangenen Hügel. Hier leben stolze Clans nach alten Traditionen, Druiden hüten heilige Haine. Die Caeldorner sind ein freies Volk, misstrauisch gegenüber fremder Magie und Herrschern.</p>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <div class="region-text">
+                    <span class="tag">Seefahrer</span>
+                    <h2>Die Donnerfelsen</h2>
+                    <p>Im Westen liegen die Donnerfelsen – eine zerklüftete Inselkette, Heimat verwegener Seefahrer und Freibeuter. Hier gilt das Recht des Stärkeren in berüchtigten Piratenhäfen und uralten Ruinen.</p>
+                </div>
+            </div>
+
+            <div class="region-card" style="border-top-color: var(--silver);">
+                <div class="region-text">
+                    <span class="tag" style="color:var(--silver)">Metropole</span>
+                    <h2 style="color:var(--silver)">Silberwacht</h2>
+                    <p>Die Stadt der tausend Türme ist eine kosmopolitische Metropole. Regiert von Kaufmannsfamilien, findet man hier alles: seltene Waren, verbotene Magie und Geheimnisse aller Völker.</p>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <div class="region-text">
+                    <span class="tag">Strategisch</span>
+                    <h2>Die Gezeitenfurt</h2>
+                    <p>An der Grenze zur Wildnis kontrolliert dieser Posten den einzigen sicheren Landweg zwischen Nord und Süd. Ein ständig umkämpfter Ort und Ausgangspunkt für Expeditionen.</p>
+                </div>
+            </div>
+
+            <div class="region-card" style="border-top-color: #444;">
+                <div class="region-text">
+                    <span class="tag" style="color:#aaa">Geheimbund</span>
+                    <h2 style="color:#aaa">Die Nachtspinner</h2>
+                    <p>Eine geheimnisvolle Bruderschaft, die im Verborgenen agiert. Manche sagen, sie seien Assassinen, andere behaupten, sie ziehen an den Fäden des Schicksals selbst. Vorsicht ist geboten.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="bibliothek">
+        <h2 style="text-align: center; color: var(--gold);">Die Bibliothek</h2>
+        <div class="library-grid">
+            <div class="book-card">
+                <h3>📜 Grundregelwerk</h3>
+                <p>Regeln, Völker und Lore.</p>
+                <a href="https://amzn.eu/d/6dmNk2v" target="_blank" class="btn">Amazon</a>
+            </div>
+            <div class="book-card">
+                <h3>⚔️ Abenteuerbuch</h3>
+                <p>Kampagnen zum Nachspielen.</p>
+                <a href="test_link2" class="btn">Details</a>
+            </div>
+            <div class="book-card">
+                <h3>📖 Roman</h3>
+                <p>Eine Geschichte aus Valdris.</p>
+                <a href="test_link3" class="btn">Lesen</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="downloads">
+        <div class="download-box">
+            <h2>Spielmaterial</h2>
+            <p>Lade dir den offiziellen Bogen für deinen Helden herunter.</p>
+            <a href="valdris_charakterbogen.pdf" download class="btn" style="background: var(--silver);">📄 Charakterbogen PDF</a>
+        </div>
+    </section>
+
+    <section id="karte" style="text-align: center; padding-bottom: 50px;">
+        <h2 style="color: var(--gold);">Karte von Valdris</h2>
+        <img src="karte.png" alt="Weltkarte" style="max-width: 100%; border: 1px solid var(--gold);">
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Projekt Valdris | Alle Rechte vorbehalten.</p>
+    <p style="font-size: 0.7rem; color: #444;">Erstellt von Marco. Die Nutzung der Inhalte bedarf der schriftlichen Zustimmung des Urhebers.</p>
+</footer>
+
+</body>
+</html>
